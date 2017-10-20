@@ -10,7 +10,7 @@
   <email>slusarz@horde.org</email>
   <active>yes</active>
  </lead>
- <date>2017-10-17</date>
+ <date>2017-10-20</date>
  <version>
   <release>1.1.6</release>
   <api>1.1.0</api>
@@ -52,7 +52,6 @@
       <file name="ClosureTest.php" role="test" />
       <file name="conf.php.dist" role="test" />
       <file name="NullTest.php" role="test" />
-      <file name="phpunit.xml" role="test" />
       <file name="TestBase.php" role="test" />
       <file name="UglifyjsTest.php" role="test" />
       <file name="YuiTest.php" role="test" />
@@ -112,7 +111,6 @@
    <install as="Horde/JavascriptMinify/fixtures/one.js" name="test/Horde/JavascriptMinify/fixtures/one.js" />
    <install as="Horde/JavascriptMinify/fixtures/two.js" name="test/Horde/JavascriptMinify/fixtures/two.js" />
    <install as="Horde/JavascriptMinify/NullTest.php" name="test/Horde/JavascriptMinify/NullTest.php" />
-   <install as="Horde/JavascriptMinify/phpunit.xml" name="test/Horde/JavascriptMinify/phpunit.xml" />
    <install as="Horde/JavascriptMinify/TestBase.php" name="test/Horde/JavascriptMinify/TestBase.php" />
    <install as="Horde/JavascriptMinify/UglifyjsTest.php" name="test/Horde/JavascriptMinify/UglifyjsTest.php" />
    <install as="Horde/JavascriptMinify/YuiTest.php" name="test/Horde/JavascriptMinify/YuiTest.php" />
@@ -219,7 +217,7 @@
    <stability>
     <release>stable</release>
     <api>stable</api></stability>
-   <date>2017-10-17</date>
+   <date>2017-10-20</date>
    <license uri="http://www.horde.org/licenses/lgpl21">LGPL-2.1</license>
    <notes>
 * 
