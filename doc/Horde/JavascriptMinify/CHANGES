@@ -1,0 +1,53 @@
+----------
+v1.1.6-git
+----------
+
+
+------
+v1.1.5
+------
+
+[jan] Mark PHP 7 as supported.
+
+
+------
+v1.1.4
+------
+
+[jan] Add unit tests.
+
+
+------
+v1.1.3
+------
+
+[jan] Fix compression with Closure.
+
+
+------
+v1.1.2
+------
+
+[mms] Silence code warnings for Closure compiler (Bug #13789).
+
+
+------
+v1.1.1
+------
+
+[jan] Raise log level of errors from Closure compiler.
+
+
+------
+v1.1.0
+------
+
+[mms] Add commented list of original source URLs in minified output, in order
+      to comply with any license terms contained in original files.
+
+
+------
+v1.0.0
+------
+
+[mms] Initial release.
