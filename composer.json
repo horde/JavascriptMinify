@@ -1,8 +1,8 @@
 {
     "name": "horde/javascriptminify",
-    "description": "Javascript Minification",
+    "description": "JavaScript minification library",
     "type": "library",
-    "homepage": "https://pear.horde.org",
+    "homepage": "https://www.horde.org",
     "license": "LGPL-2.1",
     "authors": [
         {
@@ -12,7 +12,7 @@
         }
     ],
     "version": "1.1.6",
-    "time": "2017-09-19",
+    "time": "2017-11-14",
     "repositories": [
         {
             "type": "pear",
