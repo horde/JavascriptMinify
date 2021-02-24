@@ -30,9 +30,6 @@
     "autoload": {
         "psr-0": {
             "Horde_JavascriptMinify": "lib/"
-        },
-        "psr-4": {
-            "Horde\\JavascriptMinify\\": "src/"
         }
     }
 }
