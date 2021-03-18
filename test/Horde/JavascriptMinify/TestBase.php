@@ -24,7 +24,7 @@
  */
 abstract class Horde_JavascriptMinify_TestBase extends Horde_Test_Case
 {
-    public function setUp()
+    public function setUp(): void
     {
     }
 
@@ -94,7 +94,7 @@ Foo.doit("Boo");
 JAVASCRIPT;
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
     }
 }

@@ -11,6 +11,9 @@
  * @package    JavascriptMinify
  * @subpackage UnitTests
  */
+namespace Horde\JavascriptMinify;
+use Horde_JavascriptMinify_TestBase as TestBase;
+use \Horde_JavascriptMinify_Null;
 
 /**
  * Tests the Null backend.
@@ -22,8 +25,7 @@
  * @package    JavascriptMinify
  * @subpackage UnitTests
  */
-class Horde_JavascriptMinify_NullTest
-extends Horde_JavascriptMinify_TestBase
+class NullTest extends TestBase
 {
     public function testToString()
     {
