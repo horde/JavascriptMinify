@@ -12,7 +12,6 @@
  * @subpackage UnitTests
  */
 namespace Horde\JavascriptMinify;
-use Horde_JavascriptMinify_TestBase as TestBase;
 use \Horde_JavascriptMinify_Null;
 
 /**
