@@ -11,6 +11,7 @@
  * @package    JavascriptMinify
  * @subpackage UnitTests
  */
+namespace Horde\JavascriptMinify;
 
 /**
  * Tests the Closure backend.
@@ -22,12 +23,11 @@
  * @package    JavascriptMinify
  * @subpackage UnitTests
  */
-class Horde_JavascriptMinify_ClosureTest
-extends Horde_JavascriptMinify_TestBase
+class ClosureTest extends TestBase
 {
     protected $_config;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->_config = self::getConfig(
             'JAVASCRIPTMINIFY_CLOSURE_TEST_CONFIG',

@@ -11,6 +11,8 @@
  * @package    JavascriptMinify
  * @subpackage UnitTests
  */
+namespace Horde\JavascriptMinify;
+use Horde_Test_Case as TestCase;
 
 /**
  * Base class for backend unit tests.
@@ -22,9 +24,9 @@
  * @package    JavascriptMinify
  * @subpackage UnitTests
  */
-abstract class Horde_JavascriptMinify_TestBase extends Horde_Test_Case
+abstract class TestBase extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
     }
 
@@ -94,7 +96,7 @@ Foo.doit("Boo");
 JAVASCRIPT;
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
     }
 }
