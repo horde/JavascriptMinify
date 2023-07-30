@@ -27,7 +27,7 @@ extends Horde_JavascriptMinify_TestBase
 {
     protected $_config;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->_config = self::getConfig(
             'JAVASCRIPTMINIFY_CLOSURE_TEST_CONFIG',
