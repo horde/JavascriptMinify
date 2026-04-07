@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2014-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2014-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -33,7 +34,7 @@ class Horde_JavascriptMinify_Uglifyjs extends Horde_JavascriptMinify_Null
      *   - uglifyjs: (string) [REQUIRED] Path to the UglifyJS binary.
      * </pre>
      */
-    public function setOptions(array $opts = array())
+    public function setOptions(array $opts = [])
     {
         if (!isset($opts['uglifyjs'])) {
             throw new InvalidArgumentException('Missing required uglifyjs option.');
@@ -58,10 +59,10 @@ class Horde_JavascriptMinify_Uglifyjs extends Horde_JavascriptMinify_Null
         /* Sourcemaps only supported by UglifyJS2. */
         if (isset($this->_opts['sourcemap']) && is_array($this->_data)) {
             $this->_sourcemap = Horde_Util::getTempFile();
-            $cmd .= ' --source-map ' .
-                escapeshellarg($this->_sourcemap) .
-                ' --source-map-url ' .
-                escapeshellarg($this->_opts['sourcemap']);
+            $cmd .= ' --source-map '
+                . escapeshellarg($this->_sourcemap)
+                . ' --source-map-url '
+                . escapeshellarg($this->_opts['sourcemap']);
         }
         if (isset($this->_opts['cmdline'])) {
             $cmd .= ' ' . $this->_opts['cmdline'];

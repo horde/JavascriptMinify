@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2014-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2014-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -32,9 +33,9 @@ class Horde_JavascriptMinify_Closure extends Horde_JavascriptMinify_Null
      *                sourcemap file will be stored at.
      * </pre>
      */
-    public function setOptions(array $opts = array())
+    public function setOptions(array $opts = [])
     {
-        foreach (array('closure', 'java') as $val) {
+        foreach (['closure', 'java'] as $val) {
             if (!isset($opts[$val])) {
                 throw new InvalidArgumentException(
                     sprintf('Missing required %s option.', $val)
@@ -49,8 +50,8 @@ class Horde_JavascriptMinify_Closure extends Horde_JavascriptMinify_Null
      */
     public function minify()
     {
-        if (!is_executable($this->_opts['java']) ||
-            !is_readable($this->_opts['closure'])) {
+        if (!is_executable($this->_opts['java'])
+            || !is_readable($this->_opts['closure'])) {
             $this->_opts['logger']->log(
                 'The java path or Closure location can not be accessed.',
                 Horde_Log::ERR
@@ -64,9 +65,9 @@ class Horde_JavascriptMinify_Closure extends Horde_JavascriptMinify_Null
         $cmd = trim(escapeshellcmd($this->_opts['java']) . ' -jar ' . escapeshellarg($this->_opts['closure']) . ' --warning_level QUIET');
         if (isset($this->_opts['sourcemap']) && is_array($this->_data)) {
             $this->_sourcemap = Horde_Util::getTempFile();
-            $cmd .= ' --create_source_map ' .
-                escapeshellarg($this->_sourcemap) .
-                ' --source_map_format=V3';
+            $cmd .= ' --create_source_map '
+                . escapeshellarg($this->_sourcemap)
+                . ' --source_map_format=V3';
             $suffix = "\n//# sourceMappingURL=" . $this->_opts['sourcemap'];
         } else {
             $suffix = '';

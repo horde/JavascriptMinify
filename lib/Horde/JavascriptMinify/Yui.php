@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2014-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2014-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -30,9 +31,9 @@ class Horde_JavascriptMinify_Yui extends Horde_JavascriptMinify_Null
      *   - yui: (string) [REQUIRED] Path to the YUI compressor.
      * </pre>
      */
-    public function setOptions(array $opts = array())
+    public function setOptions(array $opts = [])
     {
-        foreach (array('java', 'yui') as $val) {
+        foreach (['java', 'yui'] as $val) {
             if (!isset($opts[$val])) {
                 throw new InvalidArgumentException(
                     sprintf('Missing required %s option.', $val)
@@ -49,8 +50,8 @@ class Horde_JavascriptMinify_Yui extends Horde_JavascriptMinify_Null
     {
         $js = parent::minify();
 
-        if (!is_executable($this->_opts['java']) ||
-            !is_readable($this->_opts['yui'])) {
+        if (!is_executable($this->_opts['java'])
+            || !is_readable($this->_opts['yui'])) {
             $this->_opts['logger']->log(
                 'The java path or YUI location can not be accessed.',
                 Horde_Log::ERR
@@ -64,8 +65,8 @@ class Horde_JavascriptMinify_Yui extends Horde_JavascriptMinify_Null
         }
 
         $cmdline = new Horde_JavascriptMinify_Util_Cmdline();
-        return $cmdline->runCmd($js, trim($cmd), $this->_opts['logger']) .
-            $this->_sourceUrls();
+        return $cmdline->runCmd($js, trim($cmd), $this->_opts['logger'])
+            . $this->_sourceUrls();
     }
 
 }
