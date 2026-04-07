@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2017-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -11,7 +12,9 @@
  * @package    JavascriptMinify
  * @subpackage UnitTests
  */
+
 namespace Horde\JavascriptMinify;
+
 use Horde_Test_Case as TestCase;
 
 /**
@@ -26,9 +29,7 @@ use Horde_Test_Case as TestCase;
  */
 abstract class TestBase extends TestCase
 {
-    public function setUp(): void
-    {
-    }
+    public function setUp(): void {}
 
     protected function _minify()
     {
@@ -61,7 +62,7 @@ abstract class TestBase extends TestCase
     protected function _toString()
     {
         $minifier = $this->_getMinifier();
-        $this->assertEquals($minifier->minify(), (string)$minifier);
+        $this->assertEquals($minifier->minify(), (string) $minifier);
     }
 
     abstract protected function _getMinifier();
@@ -69,34 +70,32 @@ abstract class TestBase extends TestCase
     protected function _getFixture($files = false)
     {
         if ($files) {
-            return array(
+            return [
                 'https://www.example.com/js/one.js' => __DIR__ . '/fixtures/one.js',
                 'https://www.example.com/js/two.js' => __DIR__ . '/fixtures/two.js',
-            );
+            ];
         }
 
         return <<<JAVASCRIPT
-/**
- * Some example code.
- *
- */
-var Foo = {
-    doit: function(foo)
-    {
-        var test, xyz = 1;
+            /**
+             * Some example code.
+             *
+             */
+            var Foo = {
+                doit: function(foo)
+                {
+                    var test, xyz = 1;
 
-        this.callme();
-        xyz++;
-        test = 'Bar';
-        alert(test + foo);
-    }
-};
+                    this.callme();
+                    xyz++;
+                    test = 'Bar';
+                    alert(test + foo);
+                }
+            };
 
-Foo.doit("Boo");
-JAVASCRIPT;
+            Foo.doit("Boo");
+            JAVASCRIPT;
     }
 
-    public function tearDown(): void
-    {
-    }
+    public function tearDown(): void {}
 }

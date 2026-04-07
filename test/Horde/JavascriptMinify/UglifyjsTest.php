@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2017-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -11,6 +12,7 @@
  * @package    JavascriptMinify
  * @subpackage UnitTests
  */
+
 namespace Horde\JavascriptMinify;
 
 /**
@@ -22,6 +24,7 @@ namespace Horde\JavascriptMinify;
  * @license    http://www.horde.org/licenses/lgpl21 LGPL 2.1
  * @package    JavascriptMinify
  * @subpackage UnitTests
+ * @coversNothing
  */
 class UglifyjsTest extends TestBase
 {
@@ -33,8 +36,8 @@ class UglifyjsTest extends TestBase
             'JAVASCRIPTMINIFY_UGLIFYJS_TEST_CONFIG',
             __DIR__
         );
-        if (!$this->_config ||
-            empty($this->_config['javascriptminify']['uglifyjs'])) {
+        if (!$this->_config
+            || empty($this->_config['javascriptminify']['uglifyjs'])) {
             $this->markTestSkipped('UglifyJS compressor not configured');
         }
     }
@@ -61,7 +64,8 @@ class UglifyjsTest extends TestBase
             $opts['sourcemap'] = 'https://www.example.com/js/sourcemap';
         }
         return new Horde_JavascriptMinify_Uglifyjs(
-            $this->_getFixture($files), $opts
+            $this->_getFixture($files),
+            $opts
         );
     }
 }

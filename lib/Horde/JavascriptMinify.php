@@ -1,6 +1,7 @@
 <?php
+
 /**
- * Copyright 2014-2017 Horde LLC (http://www.horde.org/)
+ * Copyright 2014-2026 Horde LLC (http://www.horde.org/)
  *
  * See the enclosed file LICENSE for license information (LGPL). If you
  * did not receive this file, see http://www.horde.org/licenses/lgpl21.
@@ -34,7 +35,7 @@ abstract class Horde_JavascriptMinify
      *
      * @var array
      */
-    protected $_opts = array();
+    protected $_opts = [];
 
     /**
      * Temporary file containing sourcemap data.
@@ -51,7 +52,7 @@ abstract class Horde_JavascriptMinify
      *                     containing the JS data to compress.
      * @param array $opts  Additional options. See setOptions().
      */
-    public function __construct($js, array $opts = array())
+    public function __construct($js, array $opts = [])
     {
         if (!is_array($js) && !is_string($js)) {
             throw new InvalidArgumentException('First argument must either be an array or a string.');
@@ -77,13 +78,13 @@ abstract class Horde_JavascriptMinify
      *   - logger: (Horde_Log_Logger) Log object to use for log messages.
      * </pre>
      */
-    public function setOptions(array $opts = array())
+    public function setOptions(array $opts = [])
     {
         $this->_opts = array_merge($this->_opts, $opts);
 
         // Ensure we have a logger object.
-        if (!isset($this->_opts['logger']) ||
-            !($this->_opts['logger'] instanceof Horde_Log_Logger)) {
+        if (!isset($this->_opts['logger'])
+            || !($this->_opts['logger'] instanceof Horde_Log_Logger)) {
             $this->_opts['logger'] = new Horde_Log_Logger(
                 new Horde_Log_Handler_Null()
             );
@@ -108,9 +109,9 @@ abstract class Horde_JavascriptMinify
      */
     public function sourcemap()
     {
-        if (is_null($this->_sourcemap) ||
-            !is_readable($this->_sourcemap) ||
-            !strlen($sourcemap = file_get_contents($this->_sourcemap))) {
+        if (is_null($this->_sourcemap)
+            || !is_readable($this->_sourcemap)
+            || !strlen($sourcemap = file_get_contents($this->_sourcemap))) {
             return null;
         }
 
@@ -118,7 +119,7 @@ abstract class Horde_JavascriptMinify
          * contains filenames, and convert to URLs. */
         $sourcemap = json_decode($sourcemap);
         $data_lookup = array_flip($this->_data);
-        $new_sources = array();
+        $new_sources = [];
 
         foreach ($sourcemap->sources as $val) {
             $new_sources[] = $data_lookup[$val];
