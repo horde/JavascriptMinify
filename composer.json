@@ -34,7 +34,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Horde\\JavascriptMinify\\Test\\": "test/"
+            "Horde\\JavascriptMinify\\Test\\": "test/unit/",
+            "Horde\\JavascriptMinify\\Test\\Integration\\": "test/integration/"
         }
     },
     "config": {
