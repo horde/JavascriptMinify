@@ -1,5 +1,7 @@
 <?php
 
+use Horde\Util\Util;
+
 /**
  * Copyright 2014-2026 Horde LLC (http://www.horde.org/)
  *
@@ -64,7 +66,7 @@ class Horde_JavascriptMinify_Closure extends Horde_JavascriptMinify_Null
          * #13789) */
         $cmd = trim(escapeshellcmd($this->_opts['java']) . ' -jar ' . escapeshellarg($this->_opts['closure']) . ' --warning_level QUIET');
         if (isset($this->_opts['sourcemap']) && is_array($this->_data)) {
-            $this->_sourcemap = Horde_Util::getTempFile();
+            $this->_sourcemap = Util::getTempFile();
             $cmd .= ' --create_source_map '
                 . escapeshellarg($this->_sourcemap)
                 . ' --source_map_format=V3';

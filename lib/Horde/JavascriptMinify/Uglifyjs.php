@@ -1,5 +1,7 @@
 <?php
 
+use Horde\Util\Util;
+
 /**
  * Copyright 2014-2026 Horde LLC (http://www.horde.org/)
  *
@@ -58,7 +60,7 @@ class Horde_JavascriptMinify_Uglifyjs extends Horde_JavascriptMinify_Null
         $cmd = escapeshellcmd($this->_opts['uglifyjs']);
         /* Sourcemaps only supported by UglifyJS2. */
         if (isset($this->_opts['sourcemap']) && is_array($this->_data)) {
-            $this->_sourcemap = Horde_Util::getTempFile();
+            $this->_sourcemap = Util::getTempFile();
             $cmd .= ' --source-map '
                 . escapeshellarg($this->_sourcemap)
                 . ' --source-map-url '
