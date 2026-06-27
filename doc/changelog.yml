@@ -1,56 +1,14 @@
 ---
-2.0.0alpha5:
-  api: 2.0.0alpha1
-  state:
-    release: alpha
-    api: alpha
-  date: 2022-11-04
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl21
-  notes: |+
-2.0.0alpha4:
-  api: 2.0.0alpha1
-  state:
-    release: alpha
-    api: alpha
-  date: 2022-11-04
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [rla] Enable PHP 8.x compat.
-    |+
-2.0.0alpha3:
-  api: 2.0.0alpha1
-  state:
-    release: alpha
-    api: alpha
-  date: 2021-03-13
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl21
-  notes: |+
-2.0.0alpha2:
-  api: 2.0.0alpha1
-  state:
-    release: alpha
-    api: alpha
-  date: 2021-02-24
-  license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl21
-  notes: |+
-2.0.0alpha1:
-  api: 2.0.0alpha1
+2.0.0:
+  api: 2.0.0
   state:
     release: stable
     api: stable
-  date: 2021-02-24
+  date: 2026-06-27
   license:
-    identifier: LGPL-2.1
-    uri: http://www.horde.org/licenses/lgpl21
-  notes: ~
+    identifier: LGPL-2.1-only
+    uri: https://spdx.org/licenses/LGPL-2.1-only.html
+  notes: "chore: refresh qc fixes and platform deps\nchore: Update workflow dependency"
 2.0.0-beta1:
   api: 2.0.0-beta1
   state:
@@ -60,18 +18,57 @@
   license:
     identifier: LGPL-2.1-only
     uri: https://spdx.org/licenses/LGPL-2.1-only.html
-  notes: |-
-    chore: metadata
-    test: Update test suite to modern standards
-    style: php-cs-fixer
-    chore(gitignore): Add default ignores
-    Development mode for JavascriptMinify-2.0.0alpha5
-    Released JavascriptMinify-2.0.0alpha4
-    Update metadata and workflows for PHP 8 support
-    Add CI job for satis repo update
-    bootstrap.php adjusted, ci.yml added
-    no errors left
-    Development mode for JavascriptMinify-2.0.0alpha5
+  notes: "chore: metadata\ntest: Update test suite to modern standards\nstyle: php-cs-fixer\nchore(gitignore): Add default ignores\nDevelopment mode for JavascriptMinify-2.0.0alpha5\nReleased JavascriptMinify-2.0.0alpha4\nUpdate metadata and workflows for PHP 8 support\nAdd CI job for satis repo update\nbootstrap.php adjusted, ci.yml added\nno errors left\nDevelopment mode for JavascriptMinify-2.0.0alpha5"
+2.0.0alpha5:
+  api: 2.0.0alpha1
+  state:
+    release: alpha
+    api: alpha
+  date: 2022-11-04
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl21
+  notes: ''
+2.0.0alpha4:
+  api: 2.0.0alpha1
+  state:
+    release: alpha
+    api: alpha
+  date: 2022-11-04
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl21
+  notes: "[rla] Enable PHP 8.x compat.\n|+\n"
+2.0.0alpha3:
+  api: 2.0.0alpha1
+  state:
+    release: alpha
+    api: alpha
+  date: 2021-03-13
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl21
+  notes: ''
+2.0.0alpha2:
+  api: 2.0.0alpha1
+  state:
+    release: alpha
+    api: alpha
+  date: 2021-02-24
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl21
+  notes: ''
+2.0.0alpha1:
+  api: 2.0.0alpha1
+  state:
+    release: stable
+    api: stable
+  date: 2021-02-24
+  license:
+    identifier: LGPL-2.1
+    uri: http://www.horde.org/licenses/lgpl21
+  notes: null
 1.1.5:
   api: 1.1.0
   state:
@@ -81,8 +78,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [jan] Mark PHP 7 as supported.
+  notes: "[jan] Mark PHP 7 as supported.\n"
 1.1.4:
   api: 1.1.0
   state:
@@ -92,8 +88,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [jan] Add unit tests.
+  notes: "[jan] Add unit tests.\n"
 1.1.3:
   api: 1.1.0
   state:
@@ -103,8 +98,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [jan] Fix compression with Closure.
+  notes: "[jan] Fix compression with Closure.\n"
 1.1.2:
   api: 1.1.0
   state:
@@ -114,8 +108,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [mms] Silence code warnings for Closure compiler (Bug #13789).
+  notes: "[mms] Silence code warnings for Closure compiler (Bug #13789).\n"
 1.1.1:
   api: 1.1.0
   state:
@@ -125,8 +118,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [jan] Raise log level of errors from Closure compiler.
+  notes: "[jan] Raise log level of errors from Closure compiler.\n"
 1.1.0:
   api: 1.1.0
   state:
@@ -136,8 +128,7 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [mms] Add commented list of original source URLs in minified output, in order to comply with any license terms contained in original files.
+  notes: "[mms] Add commented list of original source URLs in minified output, in order to comply with any license terms contained in original files.\n"
 1.0.0:
   api: 1.0.0
   state:
@@ -147,5 +138,4 @@
   license:
     identifier: LGPL-2.1
     uri: http://www.horde.org/licenses/lgpl21
-  notes: |
-    [mms] Initial release.
+  notes: "[mms] Initial release.\n"
