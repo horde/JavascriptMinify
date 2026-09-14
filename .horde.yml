@@ -2,7 +2,7 @@
 id: JavascriptMinify
 name: JavascriptMinify
 full: JavaScript minification library
-rescription: A library that wraps various javascript minification backends.
+description: A library that wraps various javascript minification backends.
 list: dev
 type: library
 authors:
